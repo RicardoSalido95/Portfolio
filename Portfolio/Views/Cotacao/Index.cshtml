@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Portfolio.Models.Cotacao.CotacaoModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Cotação BRL</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.codein)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.high)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.low)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.varBid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pctChange)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ask)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.timestamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.create_date)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.codein)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.high)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.low)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.varBid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pctChange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ask)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.create_date)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
